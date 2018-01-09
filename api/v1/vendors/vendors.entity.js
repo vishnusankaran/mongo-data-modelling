@@ -20,5 +20,5 @@ schema.index({
     unique: true
   });
   
-  //Creating the model, model is the runtime object instance of the schema
-  module.exports = mongoose.model("vendors", schema);
+//Creating the model, model is the runtime object instance of the schema
+module.exports = mongoose.model("vendors", schema);

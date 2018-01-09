@@ -23,10 +23,8 @@ const addVendor = function(newVendor, done) {
     });
 }
 
-const getVendor = function(vendorId, done) {
-    let vendor = new VendorModel();
-    
-    vendor.find({ code: vendorId }, (err, colln) => {
+const getVendor = function(vendorCode, done) {
+    VendorModel.findOne({ code: vendorCode }).exec((err, colln) => {
         if (err) {
           console.error('Error in finding vendor, ERROR::', err, ' queries for ', query);
           done(err);
